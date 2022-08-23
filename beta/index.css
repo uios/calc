@@ -186,6 +186,10 @@
     }
 }
 
+.align-items-center {
+    align-items: center;
+}
+
 .display-flex {
     display: flex;
 }
@@ -194,11 +198,35 @@
     flex: 1;
 }
 
+.flex-2 {
+    flex: 2;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.height-20pct {
+    height: 20%;
+}
+
+.height-100pct {
+    height: 100%;
+}
+
+.height-100px {
+    height: 100px;
+}
+
 .justify-content-space-between {
     justify-content: space-between;
 }
 
-.width-100pc {
+.justify-content-center {
+    justify-content: center;
+}
+
+.width-100pct {
     width: 100%;
 }
 
@@ -232,6 +260,36 @@
     }
 }
 
+/*MATH EQUAL*/
+@media {
+    .gg-math-equal {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 16px;
+        height: 2px;
+        background: currentColor;
+        border-radius: 10px;
+        margin-top: -6px;
+        box-shadow: 0 6px 0
+    }
+}
+
+/*MATH MINUS*/
+@media {
+    .gg-math-minus {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(var(--ggs,1));
+        width: 16px;
+        height: 2px;
+        background: currentColor;
+        border-radius: 10px
+    }
+}
+
 /*MATH PERCENT*/
 @media {
     .gg-math-percent {
@@ -260,5 +318,32 @@
 
     .gg-math-percent::after {
         top: 5px
+    }
+}
+
+/*MATH PLUS*/
+@media {
+    .gg-math-plus, .gg-math-plus::after {
+        display: block;
+        box-sizing: border-box;
+        background: currentColor;
+        border-radius: 10px
+    }
+
+    .gg-math-plus {
+        margin-top: -2px;
+        position: relative;
+        transform: scale(var(--ggs,1));
+        width: 16px;
+        height: 2px
+    }
+
+    .gg-math-plus::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 16px;
+        top: -7px;
+        left: 7px
     }
 }
