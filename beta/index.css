@@ -1,0 +1,264 @@
+/*PSEUDO*/
+@media screen {
+    ::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+    }
+
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0;
+        background-color: #f5f5f5;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #d62929;
+    }
+}
+
+/*SHELL*/
+@media screen {
+    html {
+        height: 100%;
+        width: 100%;
+    }
+
+    body {
+        display: flex;
+        display: webkit-flex;
+        font-family: Arial;
+        height: 100%;
+        margin: 0;
+        width: 100%;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body[data-theme="system"] {
+            background-color: #1f1f1f;
+            color: #fff;
+        }
+    }
+
+    body > header, body > footer {
+        display: flex;
+        display: webkit-flex;
+    }
+
+    body > header > section, body > footer > section {
+        width: 100%;
+    }
+
+    blocks {
+        width: 100%;
+    }
+
+    blocks, block, box, card {
+        display: flex;
+        display: webkit-flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    block > section, card > section, box > section {
+        width: 100%;
+    }
+
+    block > picture {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    flex, column, row {
+        display: flex;
+        display: webkit-flex;
+    }
+
+    column {
+        flex-direction: column;
+    }
+
+    row {
+        flex-direction: row;
+    }
+
+    form {
+        margin: 0;
+    }
+
+    form > * {
+        width: 100%;
+    }
+
+    main {
+        display: flex;
+        display: webkit-flex;
+        /* height: 100%; */
+        overflow: visible;
+        position: relative;
+    }
+
+    ico {
+        align-items: center;
+        display: flex;
+        display: webkit-flex;
+        justify-content: center;
+    }
+
+    ico:not([data-height]) {
+        height: 50px;
+    }
+
+    ico:not([data-width]) {
+        width: 50px;
+    }
+
+    iframe {
+        border: 0;
+    }
+
+    input {
+        -webkit-appearance: none;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    [type="text"], [type="password"] {
+        background: none;
+        border: unset;
+        padding: 0;
+    }
+
+    input[type="file"], input[type="submit"] {
+        display: none;
+    }
+
+    menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    page, pages {
+        display: flex;
+        position: relative;
+    }
+
+    body > page, body > pages {
+        z-index: 123456789;
+    }
+
+    [placeholder]:not(input):empty:before {
+        content: attr(placeholder);
+    }
+
+    [data-hide]:not([data-active="true"]), [data-page]:not([data-active="true"]):not(.-active), [data-pages]:not([data-active="true"]):not(.-active) {
+        display: none;
+    }
+}
+
+/*ALIGN ITEMS*/
+@media screen {
+    .align-items-center {
+        align-items: center;
+    }
+
+    .align-items-flex-end {
+        align-items: flex-end;
+    }
+
+    @media (max-width: 960px) {
+        .-dw960px-align-items-center {
+            align-items: center;
+        }
+    }
+}
+
+.display-flex {
+    display: flex;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+.width-100pc {
+    width: 100%;
+}
+
+/*MATH DIVIDE*/
+@media {
+    .gg-math-divide {
+        transform: scale(var(--ggs,1))
+    }
+
+    .gg-math-divide, .gg-math-divide::after, .gg-math-divide::before {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        width: 16px;
+        height: 2px;
+        background: currentColor;
+        border-radius: 20px
+    }
+
+    .gg-math-divide::after, .gg-math-divide::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        top: -6px;
+        left: 6px
+    }
+
+    .gg-math-divide::after {
+        top: 4px
+    }
+}
+
+/*MATH PERCENT*/
+@media {
+    .gg-math-percent {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: rotate(-45deg) scale(var(--ggs,1));
+        width: 16px;
+        height: 2px;
+        background: currentColor;
+        border-radius: 20px
+    }
+
+    .gg-math-percent::after, .gg-math-percent::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: currentColor;
+        border-radius: 20px;
+        top: -7px;
+        left: 6px
+    }
+
+    .gg-math-percent::after {
+        top: 5px
+    }
+}
